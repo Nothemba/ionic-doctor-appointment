@@ -1,0 +1,43 @@
+<ion-card>
+<ion-card-header color="primary">
+ 
+  <ion-card-title>Admin Profile</ion-card-title>
+</ion-card-header>
+<ion-card *ngFor="let admin  of this.admin">
+  <ion-item>
+    <ion-icon class="admin_icon" name="person-outline" size="large"></ion-icon>
+  </ion-item>
+  <ion-item >
+    
+    <ion-label>Name:</ion-label>
+    <ion-input>{{admin.first_name}}</ion-input>
+  </ion-item>
+
+   <ion-item >
+    
+    <ion-label>Last Name:</ion-label>
+    <ion-input>{{admin.last_name}}</ion-input>
+  </ion-item> 
+
+  <ion-item >
+    <ion-label>Email:</ion-label>
+    <ion-input>{{admin.email_address}}</ion-input>
+  </ion-item>
+
+  <ion-item>
+    
+    <ion-label>Address:</ion-label>
+    <ion-input >{{admin.address}}</ion-input>
+  </ion-item>
+  <ion-item>
+  </ion-item> 
+  <ion-item>
+    <ion-button [routerLink]="['/registration']" expand="block" color="primary">Add Client</ion-button>
+    <ion-button [routerLink]="['/list-users']" expand="block" color="primary">View Clients</ion-button> 
+  </ion-item>
+  <ion-item>
+    <ion-button [routerLink]="['/appointment']" expand="block" color="primary">Add Bookings</ion-button>
+    <ion-button [routerLink]="['/appointments']" expand="block" color="primary">Bookings</ion-button>
+  </ion-item>
+</ion-card>
+</ion-card>
